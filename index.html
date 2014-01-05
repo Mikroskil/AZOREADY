@@ -1,233 +1,197 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"> 
-	 
-	<link rel="stylesheet" href="jquery.mobile-1.2.1.min.css" />
-    <link rel="stylesheet" href="css/mobile.css"/>
-    <link rel="stylesheet" href="css/jquery.mobile-1.2.1.css"/>
+	<title>Your New Application</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+	<style type="text/css">
+		/* Prevent copy paste for all elements except text fields */
+		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+		input, textarea  { -webkit-user-select:text; }
+		body { background-color:white; color:black }
+	</style>
+	<script src='intelxdk.js'></script>
+	<script type="text/javascript">
+		/* This code is used to run as soon as Intel activates */
+		var onDeviceReady=function(){
+		//hide splash screen
+		intel.xdk.device.hideSplashScreen();
+		};
+		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+	</script>
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.1.css">
     
-	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.mobile-1.2.1.min.js"></script>
-    
-    <style>
-		.ui-btn span{border:0;}
-		{
-		}
+  
+    <style type="text/css">
+		.ui-btn span{border:0;
+	
 	</style>
 	<style>
-	.satu{background-image:url(bg1.jpg); width:100%;
+	.satu{background-image: url(Menu.jpg); width:100%;
 	-webkit-background-size:100%;
 	-moz-background-size:100%;
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-attachment:fixed;
 	}
-	.dua{background-image:url(3.jpg); height:100%; width:100%;
+	.dua{background-image: url(Menu_Awal.jpg); height:100%; width:100%;
 	-webkit-background-size:100%;
 	-moz-background-size:100%;
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-attachment:fixed;
 	}
-	
-	.tes{font:Tahoma, Geneva, sans-serif;}
+	.tiga{background-image: url(background.jpg); height:100%; width:100%;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	}
     </style>
-     	 
-    <title>YKS</title>  
-</head> 
-<body >
-    
-    
-     <div align="center" data-role="page" data-title="Awal" id="awal">
-      		<div data-role="header" data-theme="a">
-            <h1>YUK KITA SHOLAT</h1>
-            </div>
-            <div data-role="content">
-            <br><br><br><br>
-        
-         <a href="#menu" data-role="button" data-transition="flip" data-theme="b" style="padding:30px;">Mulai</a>	
+</head>
+<body>
+	<div align="center" data-role="page" class="dua">
+     	<div data-role="content" >
+        	<br>
+            	<br><br><br>
+                <br><br><br>
+             <br>
+         	<p align="center"><a href="#home" ><img width="35%" height="50%" src="g_sholat/Optional2.png"></a></p>
         </div>
-        <div data-role="footer" data-position="fixed" data-theme="a">
-        	<h4>ZoReaDy Team Copyright &copy; 2013</h4>
+      </div>
+      
+      <div align="center" data-role="page" data-title="Awal" id="home" class="satu">
+      	<div data-role="header" data-theme="a" ><h1>PILIHAN MENU</h1>
+       		<a href="index.html" data-icon="back" data-iconpos="notext" data-direction="reverse" data-transition="flip">Back</a>
+      	</div> 
+       	<div data-role="content">
+        	<p align="center"><a href="info.html" ><img width="60%" height="50%" src="g_sholat/Optional1.png"></a></p>
+        	<p align="center"><a href="#jadwal"><img width="60%" height="50%" src="g_sholat/Optional3.png"></a></p>
+        	<p align="center"><a href="berwudhu.html" ><img width="60%" height="50%" src="g_sholat/Optional4.png"></a></p>
+       		<p align="center"> <a href="umum.html" ><img width="60%" height="50%" src="g_sholat/Optional5.png"></a></p>
+         	<p align="center"><a href="#menu"><img width="60%" height="50%" src="g_sholat/Optional6.png"></a></p>
+         	<p align="center"><a href="PraktekSholat.html" ><img width="60%" height="50%" src="g_sholat/Optional7.png"></a></p>
+         	<p align="center"><a href="index.html"><img width="60%" height="50%" src="g_sholat/Optional8.png"></a></p>
         </div>
-        
+       	<div data-role="footer" data-theme="a">
+        	<h4>ZoReaDy Team Copyright &copy; 2014</h4>
+       	</div>
       </div>
      
-      <div data-title="Awal" data-theme="e" id="menu" >
-      	<div data-role="header" data-theme="a" data-position="fixed">
+	  <div data-title="home" data-theme="b" id="menu">
+      	<div data-role="header" data-theme="a" ><h1>Panduan Lengkap</h1>
+       		<a href="#home" data-icon="back" data-iconpos="notext" data-direction="reverse" data-transition="flip">Back</a>
+      	</div> 
+      		<ul data-role="listview" >
+				<li>
+                	<a href="Sholat_Subuh.html" data-transition="flip">
+                    	<h2 >Shalat Subuh</h2>                  
+        			</a>
+            	</li> 
+            	<li>
+            		<a href="Sholat_Dzuhur.html"  data-transition="flip">
+                		<h2 >Shalat Dzuhur</h2>
+                	</a>
+            	</li>
+            	<li>
+                	<a href="Sholat_Ashar.html"  data-transition="flip">
+                		<h2 >Shalat Ashar</h2>
+                 	</a>
+            	</li>
+            	<li>
+                 	<a href="Sholat_Maghrib.html"  data-transition="flip">
+                 		<h2 >Shalat Maghrib</h2>
+                  	</a>
+            	</li>
+             	<li>
+                  	<a href="Sholat_Isya.html"  data-transition="flip">
+                  		<h2>Shalat Isya</h2>
+                   	</a>
+           		</li>
+         	</ul>
         
-        	<h1>Pilih Shalat</h1>
+      	<div data-role="footer" data-position="fixed" data-theme="a">
+        	<h4>ZoReaDy Team Copyright &copy; 2014</h4>
+      	</div>
+    </div>
+ 
+    <div data-role="page" data-title="menu" data-theme="e" id="jadwal">
+      <div data-role="header" data-theme="a" >
+      	<h1>WAKTU SHOLAT</h1>
+        	<a href="#home" data-icon="back" data-iconpos="notext" data-direction="reverse" data-transition="flip">Back
+        	</a> 
+      </div> 
+        
+     <div data-role="collapsible-set">
+       <div data-role="collapsible" >
+       		<h4>Sholat Subuh</h4>
+       		<ul>
+            	<li>Sholat Subuh, terdiri dari 2 rakaat. Waktu Shubuh diawali dari munculnya fajar shaddiq, yakni cahaya putih yang melintang di ufuk timur. Waktu shubuh berakhir ketika terbitnya Matahari.</li>
+                <li><b>Niat Sholat Subuh: <br><br>اُصَلِّى فَرْضَ الصّبْحِ رَكْعَتَينِ مُسْتَقْبِلَ الِقبْلَةِ اَدَاءً ِلله تعالى </b><br><br>Ushalli fardhas shubhi rak'ataini mustaqbilal qiblati adaa-an (ma'muuman/imaaman) lillahi ta'aalaa</li>
+             </ul>
+             <p align="center"><br><br>
+             	<audio controls>
+          			<source src="Audio/NiatSubuh.mp3" type="audio/mpeg"/>
+         	 	</audio>
+             </p>
         </div>
-          
-       
-            
-            <div data-role="content"> 
-           	
-             <table align="center" >
-             <tr>
-             <td  width="1000px">
-            
-             <a href="#subuh" data-role="button" data-transition="flip" data-theme="b" style="padding:15px;">Shalat Subuh</a>		
-              </td>
-              </tr>
-            
-              <tr>
-              <td>
-              
-              
-            	<a href="#dzuhur" data-role="button" data-transition="flip" data-theme="b" style="padding:15px;">Shalat Dzuhur</a>
-                
-               </td>
-               </tr>
-              <tr>
-              <td>
-              
-                
-                <a href="#ashar" data-role="button" data-transition="flip" data-theme="b" style="padding:15px;">Shalat Ashar</a>
-              
-                 </td>
-               </tr>
-              <tr>
-              <td>
-                 <a href="#maghrib" data-role="button" data-transition="flip"  data-theme="b" style="padding:15px;">Shalat Maghrib</a>
-                 
-               </td>
-               </tr>
-              <tr>
-              <td>
-                  <a href="#isya" data-role="button" data-transition="flip"  data-theme="b" style="padding:15px;">Shalat Isya</a>
-                   </td>
-                   </tr>
-                   </table>
-                   <a></a>
-              
-        </p>
-     </div>
-        
+        <div data-role="collapsible">
+          <h4>Sholat Dzuhur</h4>
+          <ul>
+          	<li>Sholat Dzuhur, terdiri dari 4 rakaat. Waktu Zhuhur diawali jika Matahari telah tergelincir (condong) ke arah barat, dan berakhir ketika masuk waktu Ashar.</li>
+            <li><b>Niat Sholat Dzuhur: <br><br>اصلّى فرض الظّهراربع ركعات مستقبل القبلة اداءلله تعالى</b><br><br>USHOLLII Ushalli fardhazh zhuhri arba'a rakaatim mustaqbilal qiblati adaa-an (ma'muman/imaman) lillaahi ta'aalaa </li>
+          </ul>
+          <p align="center"><br><br>
+          		<audio controls>
+          			<source src="Audio/NiatDzuhur.mp3" type="audio/mpeg"/>
+          		</audio>
+          </p>
+       	</div>
+        <div data-role="collapsible">
+          <h4>Sholat Ashar</h4>
+           <ul>
+           	<li>Sholat Ashar, terdiri dari 4 rakaat. Waktu Ashar diawali jika panjang bayang-bayang benda melebihi panjang benda itu sendiri. Khusus untuk madzab Imam Hanafi, waktu Ahsar dimulai jika panjang bayang-bayang benda dua kali melebihi panjang benda itu sendiri. Waktu Ashar berakhir dengan terbenamnya Matahari.</li>
+            <li><b>Niat Sholat Ashar: <br><br>اصلّى فرض العصراربع ركعات مستقبل القبلة اداءلله تعالى
+         </b><br><br>Ushalli fardhal 'ashri arba'a rakaatim mustaqbilal qiblati adaa-an (ma'muman/imaman) lillaahi ta'aalaa</li>
+           </ul>
+           <p align="center"><br><br>
+           		<audio controls>
+          			<source src="Audio/NiatAshar.mp3" type="audio/mpeg"/>
+         	 	</audio>
+           </p>
+         </div>
+ 		<div data-role="collapsible">
+ 			<h4>Sholat Maghrib</h4>
+ 			<ul>
+            	<li>Sholat Maghrib, terdiri dari 3 rakaat. Waktu Magrib diawali dengan terbenamnya Matahari, dan berakhir dengan masuknya waktu Isya.</li>
+                <li><b>Niat Sholat Maghrib:<br><br> </b><br><br>Ushalli fardhal maghribi tsalaatsa raka'aatim mustaqbilal qiblati adaa-an (ma'muman/imaman) lillaahi ta'aalaa </li>
+             </ul>
+             <p align="center"><br><br>
+             	<audio controls>
+          				<source src="Audio/NiatMaghrib.mp3" type="audio/mpeg"/>
+         	 	</audio>
+             </p>
+        </div>
+		<div data-role="collapsible">
+			<h4>Sholat Isya</h4>
+			<ul>
+            	<li>Sholat Isya, terdiri dari 4 rakaat. Waktu Isya diawali dengan hilangnya cahaya merah (syafaq) di langit barat, dan berakhir hingga terbitnya fajar shaddiq keesokan harinya. Menurut Imam Syi'ah, Salat Isya boleh dilakukan setelah mengerjakan Salat Magrib.</li>
+                <li><b>Niat Sholat Isya:<br><br>اصلّى فرض العشاءاربع ركعات مستقبل القبلة اداءلله تعالى</b><br><br>Ushalli fardhal isyaa-i arba'a raka'aatim mustaqbilal qiblati adaa-an (ma'muman/imaman) lillahi ta'aalaa</li>
+            </ul>
+            <p align="center"><br><br>
+            	<audio controls>
+          				<source src="Audio/NiatIsya.mp3" type="audio/mpeg"/>
+         	 	</audio>
+            </p>
+         </div>
+         </div>
         <div data-role="footer" data-position="fixed" data-theme="a">
-        	<h4>ZoReaDy Team Copyright &copy; 2013</h4>
+        	<h4>ZoReaDy Team Copyright &copy; 2014</h4>
         </div>
-        
-      </div>
-      
-      
-<div data-role="page" data-title="menu" data-theme="e" id="subuh">
-      	<div data-role="header" data-theme="e">
-        	<h1>SHOLAT SUBUH</h1>
-        
-            <br>
-            <a href="#menu"  data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="flip">menu</a>
-            
-        </div> 
-        
-        
-        
-        <div data-role="content">
-         <a data-role="button" data-theme="a" style="padding:200px;">Gerakan shalat subuh</a>
-          <br>
-         <a data-role="button" data-theme="a" style="padding:50px;">Bacaan sholat subuh</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed" data-theme="e">
-        	<h4>ZoReaDy Team Copyright &copy; 2013</h4>
-        </div>        
-      </div>
-      
-      
-      
-      
-       <div data-role="page" data-title="menu" data-theme="e" id="dzuhur">
-      	<div data-role="header" data-theme="e">
-        	<h1>SHOLAT DZUHUR</h1>
-            <br>
-            <a href="#menu"  data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="flip">menu</a>
-            
-        </div> 
-        <div data-role="content">
-         <a data-role="button" data-theme="a" style="padding:200px;">Gerakan shalat Dzuhur</a>
-         <br>
-         <a data-role="button" data-theme="a" style="padding:50px;">Bacaan sholat dzuhur</a>
-         
-        
-        </div>
-        
-        <div data-role="footer" data-position="fixed" data-theme="e">
-        	<h4>ZoReaDy Team Copyright &copy; 2013</h4>
-        </div>        
-      </div>
-      
-      
-      
-       <div data-role="page" data-title="menu" data-theme="e" id="ashar">
-      	<div data-role="header" data-theme="e">
-        	<h1>SHOLAT ASHAR</h1>
-        
-            <br>
-            <a href="#menu" data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="flip">menu</a>
-            
-        </div>
-        <div data-role="content">
-        <a data-role="button"  data-theme="a" style="padding:200px;">Gerakan shalat ashar</a>
-        <br>
-         <a data-role="button"  data-theme="a" style="padding:50px;">Bacaan sholat ashar</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed" data-theme="e">
-        	<h4>ZoReaDy Team Copyright &copy; 2013</h4>
-        </div>        
-      </div>
-      
-      
-       <div data-role="page" data-title="menu" data-theme="e" id="maghrib">
-      	<div data-role="header" data-theme="e">
-        	<h1>SHOLAT MAGHRIB</h1>
-        
-            <br>
-            <a href="#menu" data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="flip">menu</a>
-            
-        </div> 
-       
-         
-         
-        <div data-role="content">
-        <a data-role="button"  data-theme="a" style="padding:200px;">Gerakan shalat maghrib</a>
-        <br>
-         <a data-role="button"  data-theme="a" style="padding:50px;">Bacaan sholat maghrib</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed" data-theme="e">
-        	<h4>ZoReaDy Team Copyright &copy; 2013</h4>
-        </div>        
-      </div>
-      
-      
-       <div data-role="page" data-title="menu" data-theme="e" id="isya">
-      	<div data-role="header" data-theme="e">
-        	<h1>SHOLAT ISYA</h1>
-        
-            <br>
-            <a href="#menu" data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="flip">menu</a>
-            
-        </div> 
-        
-        
-        
-        <div data-role="content">
-         <a data-role="button"  data-theme="a" style="padding:200px;">Gerakan shalat isya</a>
-        <br>
-         <a data-role="button" data-theme="a" style="padding:50px;">Bacaan sholat isya</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed" data-theme="e">
-        	<h4>ZoReaDy Team Copyright &copy; 2013</h4>
-        </div>        
-      </div>
-      
-      
-      
-      
-    
-      
-    </body>
+     </div>
+</body>
 </html>
